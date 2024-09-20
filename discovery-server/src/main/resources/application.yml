@@ -1,0 +1,30 @@
+server:
+  port: 8761  # Eureka Server runs on port 8761
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/DataBase
+    username: root
+    password: root@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10  # Send heartbeat every 10 seconds
+    lease-expiration-duration-in-seconds: 40  # Expire instance after 40 seconds if no heartbeat
+  server:
+    enable-self-preservation: true  # Enable self-preservation to prevent accidental expiry
+    eviction-interval-timer-in-ms: 60000  # Evict instances every 60 seconds (safer)
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Exposes all actuator endpoints for monitoring

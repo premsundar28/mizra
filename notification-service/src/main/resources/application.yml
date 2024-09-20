@@ -1,0 +1,6 @@
+mail:
+  username: ${jacobustravis@gmail.com}
+  password: ${U%t4UshdjJUFYyowGp9Zv&x#P$mqbp*KCmb2iqM$tJfLgPyZk$EnwuANdCA#DXPzux*h^}
+
+server:
+  port:8082
