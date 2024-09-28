@@ -26,7 +26,8 @@
 		<module>Booking</module>
 		<module>notification-service</module>
 		<module>discovery-server</module>
-	</modules>
+        <module>api-gayeway</module>
+    </modules>
 
 	<dependencyManagement>
 		<dependencies>
